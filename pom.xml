@@ -48,6 +48,20 @@ under the License.
     <url>https://issues.apache.org/jira/browse/AVRO</url>
   </issueManagement>
 
+  <distributionManagement>
+    <repository>
+      <id>cloudera.thirdparty</id>
+      <url>https://repository.cloudera.com/content/repositories/third-party</url>
+      <name>Cloudera Third Party Repository</name>
+    </repository>
+  </distributionManagement>
+
+  <scm>
+    <connection>scm:git:git://github.com/abayer/avro-maven-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:abayer/avro-maven-plugin.git</developerConnection>
+    <url>https://github.com/abayer/avro-maven-plugin</url>
+  </scm>
+  
   <properties>
     <!-- Set default encoding to UTF-8 to remove maven complaints-->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -86,7 +100,9 @@ under the License.
   <build>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
         <configuration>
           <source>1.5</source>
           <target>1.5</target>
